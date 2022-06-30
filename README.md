@@ -2,8 +2,6 @@
 
 Implementation of Graph Shell Attention.
 
-TODO: cleaning on acceptance
-
 # Overview
 
 * ```/configs``` contains the various parameters used in the ablation and SOTA comparison studies.
