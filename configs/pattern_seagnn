@@ -1,0 +1,49 @@
+{
+  "seed": 42,
+  "model": "SEAGNN",
+  "dataset": "pattern",
+  "gpu": true,
+  "gpu_id": 0,
+  "epochs": 250,
+  "batch_size": 16,
+  "save_freq": 10,
+  "eval_freq": 5,
+  "lr_reduce_factor": 0.5,
+  "lr_schedule_patience": 5,
+  "min_lr": 1e-6,
+  "loss_fnc": "SBM_CrossEntropy",
+
+  "net_params": {
+    "emb_dim": 32,
+    "num_heads": 4,
+    "dropout": 0.00,
+    "N": 5,
+    "num_experts": 5,
+    "readout_fnc": "sum",
+    "agg_fnc" : "sum",
+    "layer_norm": false,
+    "batch_norm": false,
+    "residual": true,
+    "edge_learning": false,
+    "use_bias": false,
+    "full_graph": false,
+    "lap_pos_enc": true,
+    "pos_enc_dim": 8,
+    "pr_enc": false,
+    "k_hop": false,
+    "k_cutoff": 2,
+    "aug": false,
+    "apply_greedy": false,
+    "apply_scaling": false,
+    "no_classes": 2
+  },
+
+  "optimizer": {
+    "type": "adam",
+    "lr": 1e-4,
+    "weight_decay": 0,
+    "momentum": 0.9,
+    "beta1":  0.9,
+    "beta2": 0.999
+  }
+}

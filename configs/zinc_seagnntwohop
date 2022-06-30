@@ -1,0 +1,49 @@
+{
+  "seed": 42,
+  "model": "SEAGNN",
+  "dataset": "zinc",
+  "gpu": true,
+  "gpu_id": 0,
+  "epochs": 500,
+  "batch_size": 64,
+  "save_freq": 10,
+  "eval_freq": 5,
+  "lr_reduce_factor": 0.5,
+  "lr_schedule_patience": 5,
+  "min_lr": 1e-6,
+  "loss_fnc": "L1Loss",
+
+  "net_params": {
+    "emb_dim": 64,
+    "num_heads": 8,
+    "dropout": 0.07,
+    "N": 10,
+    "num_experts": 10,
+    "readout_fnc": "sum",
+    "agg_fnc" : "sum",
+    "layer_norm": false,
+    "batch_norm": false,
+    "residual": true,
+    "edge_learning": false,
+    "use_bias": false,
+    "full_graph": false,
+    "lap_pos_enc": true,
+    "pos_enc_dim": 8,
+    "pr_enc": false,
+    "k_hop": true,
+    "k_cutoff": 2,
+    "aug": false,
+    "apply_greedy": false,
+    "apply_scaling": false,
+    "no_classes": 1
+  },
+
+  "optimizer": {
+    "type": "adam",
+    "lr": 1e-3,
+    "weight_decay": 5e-5,
+    "momentum": 0.9,
+    "beta1":  0.9,
+    "beta2": 0.999
+  }
+}
