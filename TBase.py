@@ -316,7 +316,7 @@ class Encoder(nn.Module):
         else:
             raise NotImplementedError("Unknown readout function: {}".format(self.readout))
         # self.out_layer = MLPReadout(self.emb_size, params['no_classes'])
-        self.out_layer = nn.Linear(self.emb_size, 1)
+        self.out_layer = nn.Linear(self.emb_size, params['no_classes'])
         self.out_act_fnc = nn.Sigmoid()
         # self.prereadout = PreReadout(self.emb_size)
 
